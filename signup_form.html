@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html  ng-app="myApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="Script/angular.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="js/controller/form_controller.js"></script>
+    <script src="factory/CURD_factory.js"></script>
+</head>
+<body>
+   
+
+    
+    <div class="container" ng-controller="formcontroler">
+
+        <form class="modal-content" ng-submit="onsubnit()">
+            <pre>{{user |json}}</pre>
+            <pre>{{user}}</pre>
+            <h1>Sign Up</h1>
+           
+            <hr>
+            <label for="Name"><b>Name</b></label>
+            <input type="text" placeholder="Name" ng-model="user.Name">
+
+            <label for="Email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" ng-model="user.email">
+
+            <label for="Phone"><b>Phone</b></label>
+            <input type="text" placeholder="Repeat Phone" ng-model="user.phone">
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+           
+           
+
+            <div class="clearfix">
+                <!--<!--<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>-->
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+
+        </form>
+    </div>
+   
+   
+  
+
+</body>
+</html>
